@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  background: rgba(105, 100, 100, 0.5);
+  align-items: center;
+  gap: 2vmin;
+  font-size: 3vmin;
+}
+.mostPopular {
+  flex-direction: column;
+  align-items: center;
+}
+.article {
+  width: 80%;
+  height: 20vmax;
+  border: 1px solid #333;
+  margin-top: 3vmin;
+  border-radius: 15px;
+  background: #81c2b2;
+  color: #333;
+  padding: 1vmax;
+  flex-wrap: wrap;
+}
+.article-title{
+    font-weight: 900;
+}
+.movie {
+  width: 20vmax;
+  height: 20vmax;
+  border: 1px solid #333;
+  padding: 2vmin;
+  background: #81c2b2;
+  color: #e9e5dd;
+  border-radius: 5px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.movie::-webkit-scrollbar {
+  display: none;
+}
+.article::-webkit-scrollbar {
+  display: none;
+}
+a{
+    text-decoration:none;
+}
+.movies-reviews {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1vmin;
+  justify-content: center;
+}
+.search {
+  width: 100vw;
+  height: 3vmax;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-input {
+  width: 50vmax;
+  height: 5vh;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: none;
+  padding-left: 2vmin;
+}
+.btn {
+  height: 5vh;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-right: none;
+  border-left: 1px solid #333;
+  border-top: none;
+  border-bottom: none;
+  background: #333;
+  color: #e9e5dd;
+}
+.nav {
+  display: flex;
+  gap: 3vmin;
+  list-style: none;
+}
+.nav li {
+  cursor: pointer;
+  padding: 1vmin;
+  border-radius: 15px;
+}
+.nav li:hover {
+  background: #81c2b2;
+}
+.checked {
+  background: #81c2b2;
+}
+
+@media (max-width: 800px) {
+  .article {
+    display: flex;
+    gap: 2vmax;
+    overflow: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .article-img {
+    position: absolute;
+    z-index: -1;
+  }
+}
